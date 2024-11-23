@@ -5,7 +5,7 @@ import org.example.springsecuritydemo.Entity.User;
 import org.example.springsecuritydemo.Mapper.UserMapper;
 import org.example.springsecuritydemo.Service.UserService;
 import org.springframework.stereotype.Service;
-//提交测试？
+
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 }
