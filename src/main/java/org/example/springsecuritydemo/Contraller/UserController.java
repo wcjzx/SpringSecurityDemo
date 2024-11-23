@@ -19,6 +19,7 @@ public class UserController {
         return userService.list();
     }
 
+
     @PostMapping("/add")
 public void add(@RequestBody User user){
     userService.saveUserDetails(user);
