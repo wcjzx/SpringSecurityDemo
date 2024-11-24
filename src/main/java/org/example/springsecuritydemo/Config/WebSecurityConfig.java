@@ -27,6 +27,10 @@ public class WebSecurityConfig {
 
 }); //使用表单授权方式
 
+//        http.logout(logout -> {
+//    logout.logoutSuccessHandler(new MyLogoutSuccessHandler()); //注销成功时的处理
+//});
+
         return http.build();
     }
 }
