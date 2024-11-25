@@ -18,7 +18,10 @@ public class UserController {
     public List<User> getList(){
         return userService.list();
     }
-
+    @GetMapping("/list2")
+    public String getList2(){
+        return "List2";
+    }
 
     @PostMapping("/add")
 public void add(@RequestBody User user){

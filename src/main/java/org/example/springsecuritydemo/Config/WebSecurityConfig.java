@@ -19,8 +19,9 @@ public class WebSecurityConfig {
         //authenticated()：已认证请求会自动被授权
         http.authorizeRequests(
                         authorize -> authorize
-                                .requestMatchers("/user/list").hasAuthority("USER_LIST")
-                                .requestMatchers("/user/add").hasAuthority("USER_ADD")
+                                .requestMatchers("/user/**").hasRole("ADMIN")
+//                                .requestMatchers("/user/list").hasAuthority("USER_LIST")
+//                                .requestMatchers("/user/add").hasAuthority("USER_ADD")
                                 .anyRequest()
                                 .authenticated())
                 .formLogin(form -> {
